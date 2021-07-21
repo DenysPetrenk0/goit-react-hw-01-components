@@ -1,0 +1,27 @@
+/** @format */
+.StatBox {
+  margin-bottom: 50px;
+}
+
+.statTitle {
+  text-align: center;
+}
+
+.statList {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10friendlistpx;
+  font-size: 20px;
+}
+
+.item {
+  margin: 30px;
+}
+
+.percentage {
+  font-size: 25px;
+}
