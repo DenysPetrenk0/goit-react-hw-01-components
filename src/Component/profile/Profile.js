@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import ProfileList from "./profileList/ProfileList";
+import ProfileItem from "./profileItem/ProfileItem";
 import style from "./profile.module.css";
 import PropTypes from "prop-types";
 
@@ -17,7 +17,11 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
 
       <ul className={style.stats}>
         {Object.entries(stats).map((item) => (
-          <ProfileList statsValue={item[0]} statsKey={item[1]} key={item[0]} />
+          <ProfileItem
+            statsNameElement={item[0]}
+            statsValueElement={item[1]}
+            key={item[0]}
+          />
         ))}
       </ul>
     </div>

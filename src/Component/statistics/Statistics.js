@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 const Statistics = ({ stats, title }) => {
   return (
     <div className={style.StatBox}>
-      <h2 className={style.statTitle}>{title}</h2>
+      <h2 className={style.statTitle}>{!title ? null : title}</h2>
       <ul className={style.statList}>
         {stats.map((item) => (
           <StatisticsList item={item} key={item.id} />
@@ -19,7 +19,10 @@ const Statistics = ({ stats, title }) => {
 };
 
 Statistics.propType = {
-  stats: PropTypes.object,
+  stats: PropTypes.shape({
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }),
 };
 
 export default Statistics;
