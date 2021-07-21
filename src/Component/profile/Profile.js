@@ -3,6 +3,7 @@
 import React from "react";
 import ProfileList from "./profileList/ProfileList";
 import style from "./profile.module.css";
+import PropTypes from "prop-types";
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
@@ -16,11 +17,19 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
 
       <ul className={style.stats}>
         {Object.entries(stats).map((item) => (
-          <ProfileList statsValue={item[0]} statsKey={item[1]} />
+          <ProfileList statsValue={item[0]} statsKey={item[1]} key={item[0]} />
         ))}
       </ul>
     </div>
   );
+};
+
+Profile.propType = {
+  name: PropTypes.String,
+  tag: PropTypes.String,
+  location: PropTypes.String,
+  avatar: PropTypes.String,
+  stats: PropTypes.object,
 };
 
 export default Profile;
