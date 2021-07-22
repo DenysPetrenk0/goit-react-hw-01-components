@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import PropTypes from "prop-types";
 
 const TransactionHistoryItem = ({ item }) => {
   return (
@@ -10,6 +11,10 @@ const TransactionHistoryItem = ({ item }) => {
       <td>{item.currency}</td>
     </tr>
   );
+};
+
+TransactionHistoryItem.propType = {
+  items: PropTypes.array,
 };
 
 export default TransactionHistoryItem;

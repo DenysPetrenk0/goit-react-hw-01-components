@@ -3,7 +3,7 @@
 import React from "react";
 import style from "../statistics.module.css";
 
-const StatisticsList = ({ item }) => {
+const StatisticsItem = ({ item }) => {
   return (
     <li className={style.item}>
       <span className={style.label}>{item.label}</span>
@@ -12,4 +12,4 @@ const StatisticsList = ({ item }) => {
   );
 };
 
-export default StatisticsList;
+export default StatisticsItem;
